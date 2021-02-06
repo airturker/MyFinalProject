@@ -1,4 +1,4 @@
-﻿using Entities.Abstract; //implement ettik - işaret ettik
+﻿using Core.Entities;//implement ettik - işaret ettik
 using System;
 using System.Collections.Generic;
 using System.Text;
