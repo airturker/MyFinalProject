@@ -38,11 +38,11 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             //AOP
-            //autofac, ninject, castlewindsor, structuremap, lightinject, dryinject --> IoC container altyapýsý sunarlardý
+            //Autofac, Ninject,CastleWindsor, StructureMap, LightInject, DryInject -->IoC Container
             //AOP
             //Postsharp
             services.AddControllers();
-            //services.AddSingleton<IProductService,ProductManager>(); //birisi IproductService isterse arka planda ProductManager veriyor.
+            //services.AddSingleton<IProductService,ProductManager>();
             //services.AddSingleton<IProductDal, EfProductDal>();
 
             services.AddCors();
@@ -64,8 +64,8 @@ namespace WebAPI
                     };
                 });
 
-            services.AddDependencyResolvers(new ICoreModule[] { 
-                new CoreModule()
+            services.AddDependencyResolvers(new ICoreModule[] {
+               new CoreModule()
             });
 
         }
@@ -77,10 +77,9 @@ namespace WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.ConfigureCustomExceptionMiddleware();
 
-            app.UseCors(builder=>builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
+            app.UseCors(builder => builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
 
             app.UseHttpsRedirection();
 
@@ -94,6 +93,7 @@ namespace WebAPI
             {
                 endpoints.MapControllers();
             });
+            //23.10 dersteyiz
         }
     }
 }

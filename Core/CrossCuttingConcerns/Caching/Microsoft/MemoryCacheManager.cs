@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Text.RegularExpressions;
 using System.Linq;
 
-namespace Core.CrossCuttingConcerns.Cashing.Microsoft
+namespace Core.CrossCuttingConcerns.Caching.Microsoft
 {
     public class MemoryCacheManager : ICacheManager
     {
